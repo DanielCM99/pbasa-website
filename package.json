@@ -12,11 +12,11 @@
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": "20.x"
+    "node": "^20.3.0 || >=22.0.0"
   },
   "dependencies": {
     "@astrojs/tailwind": "^6.0.2",
-    "astro": "^6.0.5",
+    "astro": "^5.18.1",
     "tailwindcss": "^3.4.19"
   }
 }
