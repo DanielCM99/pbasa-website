@@ -7,16 +7,21 @@ import PageHero from '../components/PageHero.astro';
 
   <PageHero title="Athletics" subtitle="Building strong bodies, strong minds, and future leaders through sports and movement." />
 
-  <!-- Intro -->
+  <!-- Intro with Image -->
   <section class="section-padding bg-white">
     <div class="container-narrow">
-      <div class="max-w-4xl mx-auto">
-        <p class="text-xl text-navy-700 leading-relaxed mb-6">
-          Our athletics program is designed to inspire a lifelong love for physical activity, teamwork, and personal growth. Through daily movement and sports, students build confidence, develop healthy habits, and learn the value of hard work and working together. While competition is part of the everyday life experience, our focus is on skill development, effort, teamwork, and sportsmanship.
-        </p>
-        <p class="text-xl text-navy-700 leading-relaxed">
-          Every student participates in athletics before, during, or after school, giving each child the opportunity to stay active, improve their skills, and feel the pride of being part of a team. At our school, athletics help develop strong bodies, strong minds, and future leaders.
-        </p>
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-xl text-navy-700 leading-relaxed mb-6">
+            Our athletics program is designed to inspire a lifelong love for physical activity, teamwork, and personal growth. Through daily movement and sports, students build confidence, develop healthy habits, and learn the value of hard work and working together.
+          </p>
+          <p class="text-xl text-navy-700 leading-relaxed">
+            Every student participates in athletics before, during, or after school, giving each child the opportunity to stay active, improve their skills, and feel the pride of being part of a team.
+          </p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-xl">
+          <img src="/images/athletics-action.jpg" alt="Students in athletics" class="w-full h-72 object-cover" loading="lazy" />
+        </div>
       </div>
     </div>
   </section>

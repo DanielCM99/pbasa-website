@@ -7,13 +7,18 @@ import PageHero from '../components/PageHero.astro';
 
   <PageHero title="Academics" subtitle="A student-centered educational program integrating classical academics, the arts, and athletics." />
 
-  <!-- Intro -->
+  <!-- Intro with Image -->
   <section class="section-padding bg-white">
     <div class="container-narrow">
-      <div class="max-w-4xl mx-auto">
-        <p class="text-xl text-navy-700 leading-relaxed mb-6">
-          Whether you are looking for support in your child's educational journey, a welcoming community of friends, or a supportive learning environment focused on your child's individual needs, Palm Beach Academy of Sports and Arts offers a unique educational program that integrates strong academics with opportunities in sports and the arts.
-        </p>
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-xl text-navy-700 leading-relaxed">
+            Whether you are looking for support in your child's educational journey, a welcoming community of friends, or a supportive learning environment focused on your child's individual needs, Palm Beach Academy of Sports and Arts offers a unique educational program that integrates strong academics with opportunities in sports and the arts.
+          </p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-xl">
+          <img src="/images/classroom.jpeg" alt="Students learning in the classroom" class="w-full h-72 object-cover" loading="lazy" />
+        </div>
       </div>
     </div>
   </section>

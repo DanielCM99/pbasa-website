@@ -123,6 +123,31 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- Image Feature Section -->
+  <section class="relative">
+    <div class="grid lg:grid-cols-2">
+      <div class="relative h-72 lg:h-[480px] overflow-hidden">
+        <img src="/images/students-hallway.jpg" alt="PBASA students in the hallway" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+      </div>
+      <div class="bg-navy-900 text-white flex items-center p-10 lg:p-16">
+        <div>
+          <span class="text-gold-400 font-semibold text-sm uppercase tracking-widest">Our Community</span>
+          <h2 class="text-3xl sm:text-4xl font-heading font-bold mt-3 mb-6">A Place to Belong, Grow, and Succeed</h2>
+          <div class="gold-divider mb-6"></div>
+          <p class="text-navy-200 leading-relaxed text-lg mb-8">
+            At Palm Beach Academy of Sports and Arts, every student is known, valued, and supported. Our close-knit community fosters meaningful relationships between students, teachers, and families.
+          </p>
+          <a href="/enrollment" class="btn-primary">
+            Join Our School
+            <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Three Program Areas -->
   <section class="section-padding bg-navy-50">
     <div class="container-narrow">
@@ -135,10 +160,9 @@ import Layout from '../layouts/Layout.astro';
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Academics -->
         <div class="card group">
-          <div class="h-48 bg-gradient-to-br from-navy-800 to-navy-600 flex items-center justify-center">
-            <svg class="w-20 h-20 text-gold-400 group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-            </svg>
+          <div class="h-48 overflow-hidden relative">
+            <img src="/images/classroom.jpeg" alt="Classroom learning" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-900/60 to-transparent"></div>
           </div>
           <div class="p-8">
             <h3 class="text-2xl font-heading font-bold text-navy-900 mb-3">Classical Academics</h3>
@@ -154,10 +178,9 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Arts -->
         <div class="card group">
-          <div class="h-48 bg-gradient-to-br from-gold-600 to-gold-400 flex items-center justify-center">
-            <svg class="w-20 h-20 text-navy-900 group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-            </svg>
+          <div class="h-48 overflow-hidden relative">
+            <img src="/images/arts-class.jpg" alt="Students painting in arts class" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-gold-700/60 to-transparent"></div>
           </div>
           <div class="p-8">
             <h3 class="text-2xl font-heading font-bold text-navy-900 mb-3">The Arts</h3>
@@ -173,10 +196,9 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Athletics -->
         <div class="card group">
-          <div class="h-48 bg-gradient-to-br from-navy-600 to-navy-400 flex items-center justify-center">
-            <svg class="w-20 h-20 text-gold-400 group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
+          <div class="h-48 overflow-hidden relative">
+            <img src="/images/athletics-action.jpg" alt="Students running in athletics" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-700/60 to-transparent"></div>
           </div>
           <div class="p-8">
             <h3 class="text-2xl font-heading font-bold text-navy-900 mb-3">Athletics</h3>
