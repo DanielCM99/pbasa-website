@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+---
+
+<Layout title="Code of Conduct" description="PBASA Code of Student Conduct - aligned with the School District of Palm Beach County standards.">
+
+  <PageHero title="Code of Conduct" subtitle="Maintaining a safe and respectful learning environment for all students." />
+
+  <!-- Content -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <div class="max-w-4xl mx-auto">
+
+        <!-- Overview -->
+        <div class="mb-12">
+          <p class="text-xl text-navy-700 leading-relaxed mb-6">
+            Palm Beach Academy of Sports and Arts has adopted the School District of Palm Beach County (SDPBC) Code of Student Conduct. The roles and responsibilities of the administration and staff will be as defined in the SDPBC Code of Conduct.
+          </p>
+
+          <a
+            href="https://www.palmbeachschools.org/students_parents/student_code_of_conduct"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 bg-navy-50 hover:bg-navy-100 rounded-2xl p-6 transition-colors group w-full"
+          >
+            <div class="w-14 h-14 bg-navy-800 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-gold-500 transition-colors">
+              <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-heading font-bold text-navy-900 group-hover:text-gold-700 transition-colors">Student Code of Conduct</h3>
+              <p class="text-navy-500 text-sm">Palm Beach County School District &mdash; View the full document</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Parent/Student Acknowledgement -->
+        <div class="bg-gradient-to-br from-gold-50 to-white rounded-2xl p-8 border border-gold-200 mb-12">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-gold-500 rounded-xl flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-heading font-bold text-navy-900 mb-3">Parent &amp; Student Acknowledgement</h3>
+              <p class="text-navy-600 leading-relaxed">
+                Both parents and students will be expected to sign and return an acknowledgement form provided in their Family and Student Handbook.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Disciplinary Policy -->
+        <div class="bg-navy-50 rounded-2xl p-8">
+          <h3 class="text-xl font-heading font-bold text-navy-900 mb-4">Disciplinary Procedures</h3>
+          <p class="text-navy-600 leading-relaxed">
+            If charter administrators determine that a student's actions reach the level of an expellable offense as outlined in the SDPBC Elementary and Secondary Student Code of Conduct and in accordance with the requirements outlined in Florida Statutes 1006.07, 790.162, and 790.163, they will immediately seek approval from the governing board to proceed with a recommendation for expulsion and contact the SDPBC Charter Schools and Legal Departments for guidance as outlined in the Charter School Expulsion Checklist.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</Layout>

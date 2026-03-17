@@ -1,0 +1,101 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+---
+
+<Layout title="Dress Code" description="PBASA dress code policy - promoting safety, respect, and school unity through our uniform requirements.">
+
+  <PageHero title="Dress Code" subtitle="Promoting a safe, respectful, and focused learning environment while encouraging school pride and unity." />
+
+  <!-- Dress Code Content -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-xl text-navy-700 leading-relaxed mb-12">
+          Palm Beach Academy of Sports and Arts maintains a dress code that promotes a safe, respectful, and focused learning environment while encouraging school pride and unity among students.
+        </p>
+
+        <!-- Daily Uniform -->
+        <div class="mb-12">
+          <div class="flex items-center gap-3 mb-8">
+            <div class="gold-divider"></div>
+            <span class="text-gold-600 font-semibold text-sm uppercase tracking-widest">Requirements</span>
+          </div>
+          <h2 class="text-3xl font-heading font-bold text-navy-900 mb-8">Daily Uniform Requirements</h2>
+
+          <div class="grid sm:grid-cols-3 gap-6">
+            <!-- Polo Shirts -->
+            <div class="bg-navy-50 rounded-2xl p-8 text-center">
+              <div class="w-16 h-16 bg-navy-800 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                <svg class="w-8 h-8 text-gold-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-heading font-bold text-navy-900 mb-3">Polo Shirts</h3>
+              <p class="text-navy-600 text-sm leading-relaxed">
+                Students are required to wear a collared polo shirt each day. Polo shirt colors will be grade-level specific to help build school identity and community.
+              </p>
+            </div>
+
+            <!-- Bottoms -->
+            <div class="bg-navy-50 rounded-2xl p-8 text-center">
+              <div class="w-16 h-16 bg-navy-800 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                <svg class="w-8 h-8 text-gold-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-heading font-bold text-navy-900 mb-3">Bottoms</h3>
+              <p class="text-navy-600 text-sm leading-relaxed">
+                Students must wear beige or khaki shorts, pants, skirts, or skorts. All bottoms should be appropriate in length and fit for a school setting.
+              </p>
+            </div>
+
+            <!-- Shoes -->
+            <div class="bg-navy-50 rounded-2xl p-8 text-center">
+              <div class="w-16 h-16 bg-navy-800 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                <svg class="w-8 h-8 text-gold-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-heading font-bold text-navy-900 mb-3">Shoes</h3>
+              <p class="text-navy-600 text-sm leading-relaxed">
+                Students must wear closed-toe athletic shoes at all times to ensure safety and participation in daily physical activities.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- General Guidelines -->
+        <div class="bg-gradient-to-br from-gold-50 to-white rounded-2xl p-8 border border-gold-200">
+          <h3 class="text-2xl font-heading font-bold text-navy-900 mb-6">General Guidelines</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-gold-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+              </svg>
+              <span class="text-navy-700">Clothing must be neat, clean, and in good condition.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-gold-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+              </svg>
+              <span class="text-navy-700">Athletic shoes must be suitable for daily movement, physical education, and active learning.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-gold-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+              </svg>
+              <span class="text-navy-700">Outerwear worn in the classroom should be school-appropriate.</span>
+            </li>
+          </ul>
+          <div class="mt-8 pt-6 border-t border-gold-200">
+            <p class="text-navy-600 italic">
+              This dress code supports a culture of respect, safety, and readiness to learn, while reflecting the active and dynamic environment of Palm Beach Academy of Sports and Arts.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>

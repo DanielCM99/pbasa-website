@@ -1,0 +1,162 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+---
+
+<Layout title="Enrollment" description="Enroll your child at Palm Beach Academy of Sports and Arts. Open enrollment for K-8 students.">
+
+  <PageHero title="Enrollment" subtitle="Join our community of learners. Pre-enrollment is now open for the upcoming school year." />
+
+  <!-- Open Enrollment -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <span class="text-gold-600 font-semibold text-sm uppercase tracking-widest">Admissions</span>
+          <h2 class="text-4xl font-heading font-bold text-navy-900 mt-3 mb-6">Admission &amp; Selection Process</h2>
+          <div class="gold-divider mx-auto mb-6"></div>
+        </div>
+
+        <!-- Open Enrollment Banner -->
+        <div class="bg-gradient-to-r from-gold-50 to-gold-100 border-l-4 border-gold-500 rounded-r-2xl p-8 mb-12">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-gold-500 rounded-xl flex items-center justify-center shrink-0">
+              <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-2xl font-heading font-bold text-navy-900 mb-2">Open Enrollment</h3>
+              <p class="text-navy-700 text-lg mb-4">We are currently accepting pre-enrollment applications for the upcoming school year.</p>
+              <a href="https://docs.google.com/forms/d/1CuhqVLxdc6ujO8y3FLcWLoVdVuoKK6SDI2h0ay5Hulo/" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                Complete Pre-Enrollment Form
+                <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Acceptance Procedure -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-heading font-bold text-navy-900 mb-4 flex items-center gap-3">
+            <span class="w-10 h-10 bg-navy-800 text-white rounded-lg flex items-center justify-center text-sm font-bold">1</span>
+            Acceptance Procedure
+          </h3>
+          <div class="ml-13 pl-6 border-l-2 border-navy-100">
+            <p class="text-navy-600 leading-relaxed text-lg">
+              Parents will be notified of their child's acceptance via email. Please ensure you can receive school emails and check your spam/junk folder regularly. It is important to keep all contact information on your application current, as most communication will be sent electronically.
+            </p>
+            <p class="text-navy-700 font-semibold mt-4 bg-navy-50 rounded-lg p-4">
+              Parents/guardians will have 3 days to complete and return the registration forms after receiving an acceptance email.
+            </p>
+          </div>
+        </div>
+
+        <!-- Required Documents -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-heading font-bold text-navy-900 mb-4 flex items-center gap-3">
+            <span class="w-10 h-10 bg-navy-800 text-white rounded-lg flex items-center justify-center text-sm font-bold">2</span>
+            Required Documents for Student Registration
+          </h3>
+          <p class="text-navy-500 text-sm mb-6 ml-13 pl-6">(included in the registration packet)</p>
+
+          <div class="grid md:grid-cols-2 gap-6 ml-0 lg:ml-13 lg:pl-6">
+            <!-- Within 3 days -->
+            <div class="bg-navy-50 rounded-2xl p-6">
+              <h4 class="font-semibold text-navy-900 mb-4 flex items-center gap-2">
+                <svg class="w-5 h-5 text-gold-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Within 3 Days of Acceptance
+              </h4>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-gold-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+                  </svg>
+                  <span class="text-navy-700 text-sm">Parent-Student Contract</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-gold-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+                  </svg>
+                  <span class="text-navy-700 text-sm">Home Language Survey</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-gold-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+                  </svg>
+                  <span class="text-navy-700 text-sm">Record of Prior School</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Additional Documents -->
+            <div class="bg-gold-50 rounded-2xl p-6">
+              <h4 class="font-semibold text-navy-900 mb-4 flex items-center gap-2">
+                <svg class="w-5 h-5 text-gold-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Additional Documents Needed
+              </h4>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-gold-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+                  </svg>
+                  <span class="text-navy-700 text-sm">Two Proofs of Residence in Palm Beach County</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-gold-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+                  </svg>
+                  <span class="text-navy-700 text-sm">Record of immunizations (DH 680 or DH 681)</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-gold-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+                  </svg>
+                  <span class="text-navy-700 text-sm">Record of physical (DH 3040 - Pages 1 &amp; 2 required)</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-gold-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+                  </svg>
+                  <span class="text-navy-700 text-sm">Proof of birth (Birth Certificate, passport, religious record, etc.)</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-gold-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+                  </svg>
+                  <span class="text-navy-700 text-sm">Additional helpful documents from previous school(s)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding bg-navy-900 text-white text-center">
+    <div class="container-narrow max-w-3xl">
+      <h2 class="text-3xl font-heading font-bold mb-6">Have Questions About Enrollment?</h2>
+      <p class="text-navy-200 text-lg mb-8">We're here to help. Reach out to us and we'll guide you through the enrollment process.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="mailto:info@pbasa.org" class="btn-primary">
+          Contact Us
+          <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </a>
+        <a href="https://docs.google.com/forms/d/1CuhqVLxdc6ujO8y3FLcWLoVdVuoKK6SDI2h0ay5Hulo/" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+          Pre-Enroll Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

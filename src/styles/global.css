@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-body text-navy-900 antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3 bg-gold-500 text-navy-900 font-semibold rounded-lg
+    hover:bg-gold-400 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg
+    hover:bg-white hover:text-navy-900 transition-all duration-300;
+  }
+  .btn-navy {
+    @apply inline-flex items-center justify-center px-8 py-3 bg-navy-800 text-white font-semibold rounded-lg
+    hover:bg-navy-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5;
+  }
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+  .container-narrow {
+    @apply max-w-7xl mx-auto;
+  }
+  .page-hero {
+    @apply relative bg-navy-900 text-white py-24 sm:py-32 overflow-hidden;
+  }
+  .page-hero-overlay {
+    @apply absolute inset-0 bg-gradient-to-r from-navy-900/95 via-navy-900/80 to-navy-900/60;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden;
+  }
+  .pillar-card {
+    @apply relative bg-white rounded-2xl p-8 shadow-lg border-t-4 border-gold-500
+    hover:shadow-2xl hover:-translate-y-1 transition-all duration-300;
+  }
+  .gold-divider {
+    @apply w-20 h-1 bg-gold-500 rounded-full;
+  }
+}

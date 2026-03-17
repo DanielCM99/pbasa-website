@@ -1,0 +1,146 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+---
+
+<Layout title="About" description="Learn about Palm Beach Academy of Sports and Arts - our vision, mission, and the pillars that guide our school community.">
+
+  <PageHero title="About Us" subtitle="Discover our mission, vision, and the values that guide Palm Beach Academy of Sports and Arts." />
+
+  <!-- Vision & Mission -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-2 gap-16">
+        <!-- Vision -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-gold-100 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-gold-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </div>
+            <span class="text-gold-600 font-semibold text-sm uppercase tracking-widest">Our Vision</span>
+          </div>
+          <h2 class="text-3xl font-heading font-bold text-navy-900 mb-6">A Place Where Every Student Thrives</h2>
+          <div class="gold-divider mb-6"></div>
+          <p class="text-navy-600 leading-relaxed text-lg">
+            The vision of Palm Beach Academy of Sports and Arts is to create a safe, supportive, and student-centered learning environment grounded in classical academics, the arts, and athletics. In partnership with families, our administrators, teachers, and staff are committed to guiding every student&mdash;especially those with unique and at-promise needs&mdash;toward achieving their fullest potential and pursuing their own American Dream.
+          </p>
+          <p class="text-navy-600 leading-relaxed text-lg mt-4">
+            Through the daily practice of Leadership, Integrity, Optimism, Nobility, and Strength, we strive to develop confident, resilient, and purpose-driven individuals.
+          </p>
+        </div>
+
+        <!-- Mission -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 bg-navy-100 rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-navy-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <span class="text-navy-600 font-semibold text-sm uppercase tracking-widest">Our Mission</span>
+          </div>
+          <h2 class="text-3xl font-heading font-bold text-navy-900 mb-6">Empowering Full Potential</h2>
+          <div class="gold-divider mb-6"></div>
+          <p class="text-navy-600 leading-relaxed text-lg">
+            The mission of Palm Beach Academy of Sports and Arts Charter School is to empower every student to reach their full potential within an empathetic, encouraging, and supportive learning environment.
+          </p>
+          <p class="text-navy-600 leading-relaxed text-lg mt-4">
+            Through a balanced focus on classical academics, the arts, and athletics, we partner with families to challenge and inspire students with rigorous classroom instruction, meaningful mentorship, and enriching after-school programs that foster character, creativity, and lifelong success.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillars Section -->
+  <section class="section-padding bg-navy-900 text-white">
+    <div class="container-narrow">
+      <div class="text-center mb-16">
+        <span class="text-gold-400 font-semibold text-sm uppercase tracking-widest">Our Foundation</span>
+        <h2 class="text-4xl sm:text-5xl font-heading font-bold mt-3 mb-6">Educational Pillars</h2>
+        <div class="gold-divider mx-auto mb-6"></div>
+        <p class="text-xl text-navy-200 max-w-3xl mx-auto">
+          Palm Beach Academy of Sports and Arts is grounded in five core pillars that guide our students' character development, academic growth, and leadership.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div class="bg-navy-800/50 backdrop-blur rounded-2xl p-8 text-center border border-navy-700/50 hover:border-gold-500/50 transition-all duration-300">
+          <div class="text-4xl font-heading font-bold text-gold-400 mb-2">L</div>
+          <h3 class="text-xl font-heading font-bold mb-3">Loyalty</h3>
+          <p class="text-navy-300 text-sm leading-relaxed">Building a strong sense of commitment to community, teamwork, and supporting one another.</p>
+        </div>
+        <div class="bg-navy-800/50 backdrop-blur rounded-2xl p-8 text-center border border-navy-700/50 hover:border-gold-500/50 transition-all duration-300">
+          <div class="text-4xl font-heading font-bold text-gold-400 mb-2">I</div>
+          <h3 class="text-xl font-heading font-bold mb-3">Integrity</h3>
+          <p class="text-navy-300 text-sm leading-relaxed">Encouraging honesty, responsibility, and ethical decision-making in all actions.</p>
+        </div>
+        <div class="bg-navy-800/50 backdrop-blur rounded-2xl p-8 text-center border border-navy-700/50 hover:border-gold-500/50 transition-all duration-300">
+          <div class="text-4xl font-heading font-bold text-gold-400 mb-2">O</div>
+          <h3 class="text-xl font-heading font-bold mb-3">Optimism</h3>
+          <p class="text-navy-300 text-sm leading-relaxed">Inspiring a positive mindset, resilience, and confidence in overcoming challenges.</p>
+        </div>
+        <div class="bg-navy-800/50 backdrop-blur rounded-2xl p-8 text-center border border-navy-700/50 hover:border-gold-500/50 transition-all duration-300">
+          <div class="text-4xl font-heading font-bold text-gold-400 mb-2">N</div>
+          <h3 class="text-xl font-heading font-bold mb-3">Nobility</h3>
+          <p class="text-navy-300 text-sm leading-relaxed">Promoting respect, kindness, and a commitment to serving others.</p>
+        </div>
+        <div class="bg-navy-800/50 backdrop-blur rounded-2xl p-8 text-center border border-navy-700/50 hover:border-gold-500/50 transition-all duration-300">
+          <div class="text-4xl font-heading font-bold text-gold-400 mb-2">S</div>
+          <h3 class="text-xl font-heading font-bold mb-3">Strength</h3>
+          <p class="text-navy-300 text-sm leading-relaxed">Developing perseverance, courage, and determination both academically and personally.</p>
+        </div>
+      </div>
+
+      <p class="text-center text-navy-200 mt-12 text-lg italic max-w-3xl mx-auto">
+        These pillars are integrated throughout our academics, athletics, arts programs, and school culture, helping students grow into confident, principled, and compassionate leaders.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact/Location -->
+  <section class="section-padding bg-navy-50">
+    <div class="container-narrow">
+      <div class="text-center mb-12">
+        <span class="text-gold-600 font-semibold text-sm uppercase tracking-widest">Get in Touch</span>
+        <h2 class="text-4xl font-heading font-bold text-navy-900 mt-3 mb-6">Visit Us</h2>
+        <div class="gold-divider mx-auto"></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div class="bg-white rounded-2xl p-8 text-center shadow-md">
+          <div class="w-14 h-14 bg-gold-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-gold-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-bold text-navy-900 mb-2">Our Location</h3>
+          <p class="text-navy-600 text-sm">5500 Village Blvd<br />West Palm Beach, FL 33407</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 text-center shadow-md">
+          <div class="w-14 h-14 bg-gold-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-gold-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-bold text-navy-900 mb-2">Email Us</h3>
+          <a href="mailto:info@pbasa.org" class="text-gold-600 hover:text-gold-700 text-sm font-medium">info@pbasa.org</a><br />
+          <a href="mailto:employment@pbasa.org" class="text-navy-500 hover:text-navy-700 text-sm mt-1 inline-block">employment@pbasa.org</a>
+        </div>
+        <div class="bg-white rounded-2xl p-8 text-center shadow-md">
+          <div class="w-14 h-14 bg-gold-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-gold-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="font-heading font-bold text-navy-900 mb-2">School Year</h3>
+          <a href="https://go.boarddocs.com/fl/palmbeach/Board.nsf/files/D97JBY4C73BA/$file/2026-2027%20Calendar%20Final.pdf" target="_blank" rel="noopener noreferrer" class="text-gold-600 hover:text-gold-700 text-sm font-medium">View 2026-2027 Calendar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>

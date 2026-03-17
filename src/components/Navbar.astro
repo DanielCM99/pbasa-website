@@ -1,0 +1,103 @@
+---
+const currentPath = Astro.url.pathname;
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/academics', label: 'Academics' },
+  { href: '/athletics', label: 'Athletics' },
+  { href: '/enrollment', label: 'Enrollment' },
+  { href: '/dress-code', label: 'Dress Code' },
+  { href: '/code-of-conduct', label: 'Code of Conduct' },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-navy-900/95 backdrop-blur-md border-b border-navy-700/50" id="navbar">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3 shrink-0">
+        <img src="/images/logo.png" alt="PBASA Logo" class="h-14 w-auto" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden lg:flex items-center gap-1">
+        {navLinks.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200',
+              currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))
+                ? 'text-gold-400 bg-navy-800'
+                : 'text-white/80 hover:text-white hover:bg-navy-800/50',
+            ]}
+          >
+            {link.label}
+          </a>
+        ))}
+        <a
+          href="https://docs.google.com/forms/d/1CuhqVLxdc6ujO8y3FLcWLoVdVuoKK6SDI2h0ay5Hulo/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ml-3 btn-primary text-sm !py-2 !px-5"
+        >
+          Pre-Enroll Now
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button
+        id="mobile-menu-btn"
+        class="lg:hidden text-white p-2 rounded-lg hover:bg-navy-800 transition-colors"
+        aria-label="Toggle navigation menu"
+      >
+        <svg id="menu-icon-open" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="lg:hidden hidden bg-navy-900 border-t border-navy-700/50">
+    <div class="px-4 py-4 space-y-1">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            'block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200',
+            currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))
+              ? 'text-gold-400 bg-navy-800'
+              : 'text-white/80 hover:text-white hover:bg-navy-800/50',
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href="https://docs.google.com/forms/d/1CuhqVLxdc6ujO8y3FLcWLoVdVuoKK6SDI2h0ay5Hulo/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block text-center btn-primary mt-3"
+      >
+        Pre-Enroll Now
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+
+  btn?.addEventListener('click', () => {
+    const isOpen = !menu?.classList.contains('hidden');
+    menu?.classList.toggle('hidden');
+    iconOpen?.classList.toggle('hidden');
+    iconClose?.classList.toggle('hidden');
+  });
+</script>
