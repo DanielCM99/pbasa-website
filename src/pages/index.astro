@@ -1,5 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const preEnrollUrl = 'https://docs.google.com/forms/d/1CuhqVLxdc6ujO8y3FLcWLoVdVuoKK6SDI2h0ay5Hulo/';
+const openHouseDates = [
+  {
+    date: 'Tuesday, April 7, 2026',
+    time: '5:00 pm - 7:00 pm',
+  },
+  {
+    date: 'Saturday, April 11, 2026',
+    time: '10:00 am - 2:00 pm',
+  },
+];
 ---
 
 <Layout title="Home" description="Palm Beach Academy of Sports and Arts - A tuition-free K-8 public charter school in West Palm Beach. Classical academics, arts, and athletics.">
@@ -27,7 +39,7 @@ import Layout from '../layouts/Layout.astro';
           A tuition-free K-8 public charter school in West Palm Beach empowering every student through classical academics, the arts, and athletics.
         </p>
         <div class="flex flex-wrap gap-4">
-          <a href="https://docs.google.com/forms/d/1CuhqVLxdc6ujO8y3FLcWLoVdVuoKK6SDI2h0ay5Hulo/" target="_blank" rel="noopener noreferrer" class="btn-primary text-lg">
+          <a href={preEnrollUrl} target="_blank" rel="noopener noreferrer" class="btn-primary text-lg">
             Pre-Enroll Now
             <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -43,6 +55,78 @@ import Layout from '../layouts/Layout.astro';
       <svg class="w-6 h-6 text-gold-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
       </svg>
+    </div>
+  </section>
+
+  <!-- Open House Feature -->
+  <section class="relative overflow-hidden border-y border-gold-500/20 bg-navy-900 text-white" id="open-house-feature">
+    <img
+      src="/images/students-hallway.jpg"
+      alt="PBASA students in the hallway"
+      class="absolute inset-0 h-full w-full object-cover"
+      loading="lazy"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-900/90 to-navy-900/75"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
+      <div class="grid gap-8 lg:grid-cols-[1.25fr_0.85fr] lg:items-center">
+        <div class="max-w-3xl">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="gold-divider"></div>
+            <span class="text-gold-400 font-semibold text-sm uppercase tracking-widest">Featured Open House</span>
+          </div>
+          <h2 class="text-4xl sm:text-5xl font-heading font-bold leading-tight mb-5">
+            Join our team now for the August, 2026 Opening!
+          </h2>
+          <p class="text-xl text-gold-200 font-semibold mb-6">
+            Student Seats Are Limited * Registering Grades K &bull; 1 &bull; 2
+          </p>
+          <div class="inline-flex items-start gap-3 rounded-2xl border border-white/10 bg-white/10 px-5 py-4 backdrop-blur-sm mb-8">
+            <svg class="w-6 h-6 text-gold-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <div>
+              <p class="text-white font-semibold">5500 Village Blvd.</p>
+              <p class="text-navy-200">West Palm Beach, FL 33407</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <a href={preEnrollUrl} target="_blank" rel="noopener noreferrer" class="btn-primary">
+              Start Pre-Enrollment
+              <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+            <a href="/enrollment" class="btn-secondary">
+              Enrollment Details
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-white/10 bg-white/10 p-6 sm:p-8 backdrop-blur-sm shadow-2xl">
+          <div class="flex items-center justify-between gap-4 mb-6">
+            <div>
+              <p class="text-gold-300 font-semibold text-sm uppercase tracking-widest mb-2">Open House Dates &amp; Times</p>
+              <h3 class="text-2xl font-heading font-bold text-white">Visit PBASA</h3>
+            </div>
+            <div class="w-14 h-14 rounded-2xl bg-gold-500/15 flex items-center justify-center">
+              <svg class="w-7 h-7 text-gold-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            {openHouseDates.map((event) => (
+              <div class="rounded-2xl bg-navy-950/55 border border-white/10 p-5">
+                <p class="text-gold-300 font-semibold text-sm uppercase tracking-wide mb-2">{event.date}</p>
+                <p class="text-white text-lg font-heading font-bold">{event.time}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -364,7 +448,7 @@ import Layout from '../layouts/Layout.astro';
         Pre-enrollment is now open for the upcoming school year. Give your child the opportunity to thrive academically, artistically, and athletically.
       </p>
       <div class="flex flex-wrap gap-4 justify-center">
-        <a href="https://docs.google.com/forms/d/1CuhqVLxdc6ujO8y3FLcWLoVdVuoKK6SDI2h0ay5Hulo/" target="_blank" rel="noopener noreferrer" class="btn-primary text-lg">
+        <a href={preEnrollUrl} target="_blank" rel="noopener noreferrer" class="btn-primary text-lg">
           Start Pre-Enrollment
         </a>
         <a href="/enrollment" class="btn-secondary text-lg">
@@ -373,5 +457,127 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </section>
+
+  <!-- Open House Popup -->
+  <div id="open-house-modal" class="fixed inset-0 z-[80] hidden">
+    <button
+      type="button"
+      class="absolute inset-0 h-full w-full bg-navy-950/80 backdrop-blur-sm cursor-default"
+      aria-label="Close open house announcement"
+      data-open-house-close
+    ></button>
+
+    <div class="relative min-h-screen flex items-center justify-center p-4 sm:p-6">
+      <div class="relative w-full max-w-5xl overflow-hidden rounded-[2rem] border border-gold-200 bg-white shadow-2xl">
+        <button
+          type="button"
+          class="absolute right-4 top-4 z-20 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/90 text-navy-900 shadow-lg transition-colors hover:bg-gold-100"
+          aria-label="Close open house announcement"
+          data-open-house-close
+        >
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <div class="grid lg:grid-cols-2">
+          <div class="relative min-h-[260px] lg:min-h-full">
+            <img
+              src="/images/students-hallway.jpg"
+              alt="PBASA students in the hallway"
+              class="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-br from-navy-950/90 via-navy-900/75 to-navy-800/55"></div>
+            <div class="relative z-10 flex h-full flex-col justify-end p-6 sm:p-8">
+              <span class="text-gold-300 font-semibold text-sm uppercase tracking-widest mb-3">Open House Featured Event</span>
+              <h3 class="text-3xl sm:text-4xl font-heading font-bold text-white leading-tight mb-4">
+                August 2026 Opening
+              </h3>
+              <p class="text-lg text-navy-100 leading-relaxed max-w-md">
+                Join our team now. Student seats are limited and we are registering Grades K, 1, and 2.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-8 lg:p-10">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="gold-divider"></div>
+              <span class="text-gold-600 font-semibold text-sm uppercase tracking-widest">Open House Dates &amp; Times</span>
+            </div>
+
+            <div class="mb-6">
+              <p class="text-navy-900 text-2xl font-heading font-bold mb-3">Palm Beach Academy of Sports and Arts</p>
+              <div class="rounded-2xl border border-gold-200 bg-gold-50 p-4">
+                <p class="text-navy-900 font-semibold">5500 Village Blvd.</p>
+                <p class="text-navy-700">West Palm Beach, FL 33407</p>
+              </div>
+            </div>
+
+            <div class="space-y-4 mb-8">
+              {openHouseDates.map((event) => (
+                <div class="rounded-2xl border border-navy-100 bg-white p-5 shadow-sm">
+                  <p class="text-gold-600 font-semibold text-sm uppercase tracking-wide mb-2">{event.date}</p>
+                  <p class="text-navy-900 text-xl font-heading font-bold">{event.time}</p>
+                </div>
+              ))}
+            </div>
+
+            <div class="flex flex-wrap gap-3">
+              <a href={preEnrollUrl} target="_blank" rel="noopener noreferrer" class="btn-primary">
+                Start Pre-Enrollment
+              </a>
+              <a href="/enrollment" class="btn-navy">
+                Enrollment Details
+              </a>
+              <button
+                type="button"
+                class="inline-flex items-center justify-center rounded-lg border border-navy-200 px-6 py-3 font-semibold text-navy-700 transition-colors hover:bg-navy-50"
+                data-open-house-close
+              >
+                Maybe Later
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const openHouseModal = document.getElementById('open-house-modal');
+    const openHouseCloseButtons = document.querySelectorAll('[data-open-house-close]');
+    const openHouseStorageKey = 'pbasa-open-house-popup-dismissed';
+
+    const closeOpenHouseModal = () => {
+      if (!openHouseModal) return;
+      openHouseModal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+      sessionStorage.setItem(openHouseStorageKey, 'true');
+    };
+
+    const openOpenHouseModal = () => {
+      if (!openHouseModal) return;
+      if (sessionStorage.getItem(openHouseStorageKey)) return;
+      openHouseModal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    };
+
+    openHouseCloseButtons.forEach((button) => {
+      button.addEventListener('click', closeOpenHouseModal);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && openHouseModal && !openHouseModal.classList.contains('hidden')) {
+        closeOpenHouseModal();
+      }
+    });
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', openOpenHouseModal, { once: true });
+    } else {
+      openOpenHouseModal();
+    }
+  </script>
 
 </Layout>
