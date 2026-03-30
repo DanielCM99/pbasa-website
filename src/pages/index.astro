@@ -563,6 +563,10 @@ const openHouseDates = [
       document.body.classList.add('overflow-hidden');
     };
 
+    const scheduleOpenHouseModal = () => {
+      window.setTimeout(openOpenHouseModal, 2000);
+    };
+
     openHouseCloseButtons.forEach((button) => {
       button.addEventListener('click', closeOpenHouseModal);
     });
@@ -574,9 +578,9 @@ const openHouseDates = [
     });
 
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', openOpenHouseModal, { once: true });
+      document.addEventListener('DOMContentLoaded', scheduleOpenHouseModal, { once: true });
     } else {
-      openOpenHouseModal();
+      scheduleOpenHouseModal();
     }
   </script>
 
