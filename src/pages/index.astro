@@ -2,14 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 
 const preEnrollUrl = 'https://docs.google.com/forms/d/1CuhqVLxdc6ujO8y3FLcWLoVdVuoKK6SDI2h0ay5Hulo/';
-const openHouseDates = [
+const openHouseSessions = [
   {
-    date: 'Tuesday, April 7, 2026',
-    time: '5:00 pm - 7:00 pm',
+    day: 'Every Tuesday',
+    time: '6:00 pm - 7:30 pm',
   },
   {
-    date: 'Saturday, April 11, 2026',
-    time: '10:00 am - 2:00 pm',
+    day: 'Every Thursday',
+    time: '6:00 pm - 7:30 pm',
   },
 ];
 ---
@@ -76,10 +76,10 @@ const openHouseDates = [
             <span class="text-gold-400 font-semibold text-sm uppercase tracking-widest">Featured Open House</span>
           </div>
           <h2 class="text-4xl sm:text-5xl font-heading font-bold leading-tight mb-5">
-            Join our team now for the August, 2026 Opening!
+            Visit PBASA at Our Weekly Open House
           </h2>
           <p class="text-xl text-gold-200 font-semibold mb-6">
-            Student Seats Are Limited * Registering Grades K &bull; 1 &bull; 2
+            PBASA is hosting an open house every Tuesday and Thursday so families can tour the school and learn more about enrollment.
           </p>
           <div class="inline-flex items-start gap-3 rounded-2xl border border-white/10 bg-white/10 px-5 py-4 backdrop-blur-sm mb-8">
             <svg class="w-6 h-6 text-gold-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -107,7 +107,7 @@ const openHouseDates = [
         <div class="rounded-3xl border border-white/10 bg-white/10 p-6 sm:p-8 backdrop-blur-sm shadow-2xl">
           <div class="flex items-center justify-between gap-4 mb-6">
             <div>
-              <p class="text-gold-300 font-semibold text-sm uppercase tracking-widest mb-2">Open House Dates &amp; Times</p>
+              <p class="text-gold-300 font-semibold text-sm uppercase tracking-widest mb-2">Open House Schedule</p>
               <h3 class="text-2xl font-heading font-bold text-white">Visit PBASA</h3>
             </div>
             <div class="w-14 h-14 rounded-2xl bg-gold-500/15 flex items-center justify-center">
@@ -118,9 +118,9 @@ const openHouseDates = [
           </div>
 
           <div class="space-y-4">
-            {openHouseDates.map((event) => (
+            {openHouseSessions.map((event) => (
               <div class="rounded-2xl bg-navy-950/55 border border-white/10 p-5">
-                <p class="text-gold-300 font-semibold text-sm uppercase tracking-wide mb-2">{event.date}</p>
+                <p class="text-gold-300 font-semibold text-sm uppercase tracking-wide mb-2">{event.day}</p>
                 <p class="text-white text-lg font-heading font-bold">{event.time}</p>
               </div>
             ))}
@@ -492,10 +492,10 @@ const openHouseDates = [
             <div class="relative z-10 flex h-full flex-col justify-end p-6 sm:p-8">
               <span class="text-gold-300 font-semibold text-sm uppercase tracking-widest mb-3">Open House Featured Event</span>
               <h3 class="text-3xl sm:text-4xl font-heading font-bold text-white leading-tight mb-4">
-                August 2026 Opening
+                Weekly Open House
               </h3>
               <p class="text-lg text-navy-100 leading-relaxed max-w-md">
-                Join our team now. Student seats are limited and we are registering Grades K, 1, and 2.
+                Join us every Tuesday and Thursday to tour the school, meet the team, and learn more about enrollment.
               </p>
             </div>
           </div>
@@ -503,7 +503,7 @@ const openHouseDates = [
           <div class="p-6 sm:p-8 lg:p-10">
             <div class="flex items-center gap-3 mb-5">
               <div class="gold-divider"></div>
-              <span class="text-gold-600 font-semibold text-sm uppercase tracking-widest">Open House Dates &amp; Times</span>
+              <span class="text-gold-600 font-semibold text-sm uppercase tracking-widest">Open House Schedule</span>
             </div>
 
             <div class="mb-6">
@@ -515,9 +515,9 @@ const openHouseDates = [
             </div>
 
             <div class="space-y-4 mb-8">
-              {openHouseDates.map((event) => (
+              {openHouseSessions.map((event) => (
                 <div class="rounded-2xl border border-navy-100 bg-white p-5 shadow-sm">
-                  <p class="text-gold-600 font-semibold text-sm uppercase tracking-wide mb-2">{event.date}</p>
+                  <p class="text-gold-600 font-semibold text-sm uppercase tracking-wide mb-2">{event.day}</p>
                   <p class="text-navy-900 text-xl font-heading font-bold">{event.time}</p>
                 </div>
               ))}
