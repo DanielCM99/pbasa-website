@@ -1,0 +1,248 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+
+const donateUrl = 'https://securelink-prod.valorpaytech.com:4430/?redirect=1&uid=98074c50-3f41-11f1-9742-12a0879a85b1';
+
+const donationAmounts = ['$25', '$50', '$100', '$500+'];
+const donationSupports = [
+  'Classroom supplies',
+  'Technology, including Chromebooks and learning tools',
+  'Student activities and playground',
+  'Safety and security',
+];
+
+const paverTiers = [
+  { name: 'Standard', amount: '$100', detail: '1 Line' },
+  { name: 'Family', amount: '$250', detail: '2 Lines' },
+  { name: 'Premium', amount: '$500', detail: '3 Lines' },
+];
+
+const sponsorshipPackages = [
+  { name: 'Bronze', amount: '$1,000+', detail: 'Name listing + social media thank you' },
+  { name: 'Silver', amount: '$5,000+', detail: 'Website logo + social media' },
+  { name: 'Gold', amount: '$10,000+', detail: 'Campus banner + website + social media' },
+  { name: 'Platinum', amount: '$25,000+', detail: 'Premium placement + events + branding opportunities' },
+];
+
+const namingRights = [
+  { name: 'Gym', amount: '$1,000,000' },
+  { name: 'Art Room', amount: '$500,000' },
+  { name: 'STEM Lab', amount: '$350,000' },
+  { name: 'Courtyard', amount: '$150,000' },
+];
+
+const partnerBenefits = [
+  'Brand exposure',
+  'Community recognition',
+  'Event partnerships',
+  'Long-term impact',
+];
+
+const impactItems = [
+  'Educate and inspire students',
+  'Provide safe and engaging learning spaces',
+  'Build a strong future for our community',
+];
+---
+
+<Layout title="Support and Sponsorship" description="Support Palm Beach Academy of Sports and Arts through donations, paver campaign opportunities, sponsorship packages, naming rights, and founding partnerships.">
+
+  <PageHero
+    title="Support and Sponsorship"
+    subtitle="Help us build a strong future for our students. Every contribution directly supports classrooms, programs, and opportunities for children in our community."
+    bgImage="/images/students-hallway.jpg"
+  />
+
+  <!-- Donate Now -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="gold-divider"></div>
+            <span class="text-gold-600 font-semibold text-sm uppercase tracking-widest">Donate Now</span>
+          </div>
+          <h2 class="text-4xl sm:text-5xl font-heading font-bold text-navy-900 mb-5">Make a direct impact today.</h2>
+          <p class="text-xl text-navy-600 leading-relaxed mb-8">
+            Any amount is welcomed and helps PBASA open strong for students and families.
+          </p>
+
+          <div class="flex flex-wrap gap-3 mb-8">
+            {donationAmounts.map((amount) => (
+              <span class="inline-flex rounded-lg bg-gold-100 px-5 py-3 text-navy-900 font-heading font-bold text-lg border border-gold-200">{amount}</span>
+            ))}
+          </div>
+
+          <a href={donateUrl} target="_blank" rel="noopener noreferrer" class="btn-primary text-lg">
+            Donate Now
+            <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+          <p class="text-gold-700 font-semibold mt-5">Quick, easy, and tax-deductible.</p>
+        </div>
+
+        <div class="relative overflow-hidden rounded-2xl bg-navy-900 shadow-2xl">
+          <img src="/images/classroom.jpeg" alt="PBASA classroom" class="absolute inset-0 w-full h-full object-cover opacity-35" loading="lazy" />
+          <div class="relative z-10 p-8 sm:p-10">
+            <h3 class="text-2xl font-heading font-bold text-white mb-6">Your donation supports:</h3>
+            <ul class="space-y-4">
+              {donationSupports.map((item) => (
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-500">
+                    <svg class="w-4 h-4 text-navy-950" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span class="text-navy-100 text-lg">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paver Campaign -->
+  <section class="section-padding bg-navy-50">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center">
+        <div class="relative h-80 overflow-hidden rounded-2xl shadow-xl">
+          <img src="/images/school-image.png" alt="Palm Beach Academy campus" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+          <div class="absolute inset-0 bg-gradient-to-t from-navy-950/75 to-navy-900/10"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-7">
+            <p class="text-gold-300 font-semibold uppercase tracking-widest text-sm mb-2">Leave Your Legacy</p>
+            <h2 class="text-3xl font-heading font-bold text-white">Paver Campaign</h2>
+          </div>
+        </div>
+
+        <div>
+          <span class="text-gold-600 font-semibold text-sm uppercase tracking-widest">Paver Campaign</span>
+          <h2 class="text-4xl font-heading font-bold text-navy-900 mt-3 mb-5">Help Us Build Something That Lasts Forever.</h2>
+          <p class="text-lg text-navy-600 leading-relaxed mb-4">
+            From a dream... to a school... to a place where children will grow, learn, and succeed.
+          </p>
+          <p class="text-lg text-navy-600 leading-relaxed mb-8">
+            We are raising $250,000 to open our doors strong, and you can be part of this legacy.
+          </p>
+
+          <div class="grid sm:grid-cols-3 gap-4 mb-6">
+            {paverTiers.map((tier) => (
+              <div class="rounded-2xl bg-white p-6 shadow-md border border-navy-100">
+                <h3 class="font-heading font-bold text-navy-900 text-xl mb-2">{tier.name}</h3>
+                <p class="text-3xl font-heading font-bold text-gold-600 mb-2">{tier.amount}</p>
+                <p class="text-navy-600 font-semibold">{tier.detail}</p>
+              </div>
+            ))}
+          </div>
+
+          <p class="text-navy-700 font-semibold rounded-xl bg-gold-100 border border-gold-200 px-5 py-4">
+            Your engraved paver will be displayed on our campus walkway.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sponsorship Packages -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-gold-600 font-semibold text-sm uppercase tracking-widest">Sponsorship Packages</span>
+        <h2 class="text-4xl font-heading font-bold text-navy-900 mt-3 mb-5">Promote your business while supporting education.</h2>
+        <div class="gold-divider mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {sponsorshipPackages.map((pkg) => (
+          <div class="bg-white rounded-2xl p-7 shadow-lg border-t-4 border-gold-500">
+            <h3 class="text-2xl font-heading font-bold text-navy-900 mb-3">{pkg.name}</h3>
+            <p class="text-3xl font-heading font-bold text-gold-600 mb-4">{pkg.amount}</p>
+            <p class="text-navy-600 leading-relaxed">{pkg.detail}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Naming Rights -->
+  <section class="section-padding bg-navy-900 text-white">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center">
+        <div>
+          <span class="text-gold-400 font-semibold text-sm uppercase tracking-widest">Naming Rights</span>
+          <h2 class="text-4xl font-heading font-bold mt-3 mb-5">Create a lasting legacy with major impact.</h2>
+          <p class="text-navy-200 text-lg leading-relaxed mb-8">
+            Permanent recognition on campus and in our community.
+          </p>
+          <a href="mailto:contact@pbasa.org?subject=PBASA%20Naming%20Rights%20Inquiry" class="btn-primary">
+            Discuss Naming Rights
+          </a>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          {namingRights.map((item) => (
+            <div class="rounded-2xl border border-white/10 bg-white/10 p-6 backdrop-blur">
+              <p class="text-gold-300 font-semibold uppercase tracking-widest text-sm mb-3">{item.name}</p>
+              <p class="text-3xl font-heading font-bold text-white">{item.amount}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Become a Partner -->
+  <section class="section-padding bg-gold-50">
+    <div class="container-narrow">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-gold-700 font-semibold text-sm uppercase tracking-widest">Become a Partner</span>
+          <h2 class="text-4xl font-heading font-bold text-navy-900 mt-3 mb-5">Join us as a founding supporter.</h2>
+          <p class="text-xl text-navy-600 mb-6">Custom contributions: <strong>$5,000 to $100,000+</strong></p>
+          <p class="text-navy-700 font-semibold text-lg">Let's build something meaningful together.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          {partnerBenefits.map((benefit) => (
+            <div class="rounded-2xl bg-white p-6 shadow-md border border-gold-100">
+              <div class="w-12 h-12 rounded-xl bg-navy-900 text-gold-400 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <p class="text-navy-900 font-heading font-bold text-xl">{benefit}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why It Matters -->
+  <section class="relative overflow-hidden bg-navy-950 text-white">
+    <img src="/images/arts-class.jpg" alt="PBASA students in arts class" class="absolute inset-0 h-full w-full object-cover opacity-25" loading="lazy" />
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="max-w-4xl">
+        <span class="text-gold-400 font-semibold text-sm uppercase tracking-widest">Why It Matters</span>
+        <h2 class="text-4xl sm:text-5xl font-heading font-bold mt-3 mb-8">Your support helps us build a stronger future.</h2>
+        <div class="grid md:grid-cols-3 gap-5 mb-10">
+          {impactItems.map((item) => (
+            <div class="rounded-2xl border border-white/10 bg-white/10 p-6 backdrop-blur">
+              <p class="text-white font-semibold text-lg">{item}</p>
+            </div>
+          ))}
+        </div>
+        <a href={donateUrl} target="_blank" rel="noopener noreferrer" class="btn-primary">
+          Make a Donation
+          <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

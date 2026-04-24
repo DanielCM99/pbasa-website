@@ -6,6 +6,7 @@ const navLinks = [
   { href: '/academics', label: 'Academics' },
   { href: '/athletics', label: 'Athletics' },
   { href: '/enrollment', label: 'Enrollment' },
+  { href: '/support-and-sponsorship', label: 'Support and Sponsorship', featured: true },
   { href: '/dress-code', label: 'Dress Code' },
   { href: '/code-of-conduct', label: 'Code of Conduct' },
 ];
@@ -20,14 +21,18 @@ const navLinks = [
       </a>
 
       <!-- Desktop Nav -->
-      <div class="hidden lg:flex items-center gap-1">
+      <div class="hidden xl:flex items-center gap-1">
         {navLinks.map((link) => (
           <a
             href={link.href}
             class:list={[
-              'px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200',
+              'px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200',
               currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))
-                ? 'text-gold-400 bg-navy-800'
+                ? link.featured
+                  ? 'text-navy-950 bg-gold-400 shadow-lg shadow-gold-900/20'
+                  : 'text-gold-400 bg-navy-800'
+                : link.featured
+                  ? 'text-navy-950 bg-gold-500 hover:bg-gold-400 shadow-lg shadow-gold-900/20'
                 : 'text-white/80 hover:text-white hover:bg-navy-800/50',
             ]}
           >
@@ -47,7 +52,7 @@ const navLinks = [
       <!-- Mobile menu button -->
       <button
         id="mobile-menu-btn"
-        class="lg:hidden text-white p-2 rounded-lg hover:bg-navy-800 transition-colors"
+        class="xl:hidden text-white p-2 rounded-lg hover:bg-navy-800 transition-colors"
         aria-label="Toggle navigation menu"
       >
         <svg id="menu-icon-open" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -61,7 +66,7 @@ const navLinks = [
   </div>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="lg:hidden hidden bg-navy-900 border-t border-navy-700/50">
+  <div id="mobile-menu" class="xl:hidden hidden bg-navy-900 border-t border-navy-700/50">
     <div class="px-4 py-4 space-y-1">
       {navLinks.map((link) => (
         <a
@@ -69,7 +74,11 @@ const navLinks = [
           class:list={[
             'block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200',
             currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))
-              ? 'text-gold-400 bg-navy-800'
+              ? link.featured
+                ? 'text-navy-950 bg-gold-400'
+                : 'text-gold-400 bg-navy-800'
+              : link.featured
+                ? 'text-navy-950 bg-gold-500 hover:bg-gold-400'
               : 'text-white/80 hover:text-white hover:bg-navy-800/50',
           ]}
         >
