@@ -6,10 +6,11 @@ const navLinks = [
   { href: '/academics', label: 'Academics' },
   { href: '/athletics', label: 'Athletics' },
   { href: '/enrollment', label: 'Enrollment' },
-  { href: '/support-and-sponsorship', label: 'Support and Sponsorship', featured: true },
   { href: '/dress-code', label: 'Dress Code' },
   { href: '/code-of-conduct', label: 'Code of Conduct' },
 ];
+
+const supportPath = '/support-and-sponsorship';
 ---
 
 <nav class="fixed top-0 left-0 right-0 z-50 bg-navy-900/95 backdrop-blur-md border-b border-navy-700/50" id="navbar">
@@ -28,11 +29,7 @@ const navLinks = [
             class:list={[
               'px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200',
               currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))
-                ? link.featured
-                  ? 'text-navy-950 bg-gold-400 shadow-lg shadow-gold-900/20'
-                  : 'text-gold-400 bg-navy-800'
-                : link.featured
-                  ? 'text-navy-950 bg-gold-500 hover:bg-gold-400 shadow-lg shadow-gold-900/20'
+                ? 'text-gold-400 bg-navy-800'
                 : 'text-white/80 hover:text-white hover:bg-navy-800/50',
             ]}
           >
@@ -46,6 +43,15 @@ const navLinks = [
           class="ml-3 btn-primary text-sm !py-2 !px-5"
         >
           Pre-Enroll Now
+        </a>
+        <a
+          href={supportPath}
+          class:list={[
+            'ml-2 btn-secondary text-sm !py-2 !px-5',
+            currentPath.startsWith(supportPath) ? '!bg-white !text-navy-900' : '',
+          ]}
+        >
+          Support and Sponsorship
         </a>
       </div>
 
@@ -74,17 +80,22 @@ const navLinks = [
           class:list={[
             'block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200',
             currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))
-              ? link.featured
-                ? 'text-navy-950 bg-gold-400'
-                : 'text-gold-400 bg-navy-800'
-              : link.featured
-                ? 'text-navy-950 bg-gold-500 hover:bg-gold-400'
+              ? 'text-gold-400 bg-navy-800'
               : 'text-white/80 hover:text-white hover:bg-navy-800/50',
           ]}
         >
           {link.label}
         </a>
       ))}
+      <a
+        href={supportPath}
+        class:list={[
+          'block text-center btn-secondary mt-3',
+          currentPath.startsWith(supportPath) ? '!bg-white !text-navy-900' : '',
+        ]}
+      >
+        Support and Sponsorship
+      </a>
       <a
         href="https://docs.google.com/forms/d/1CuhqVLxdc6ujO8y3FLcWLoVdVuoKK6SDI2h0ay5Hulo/"
         target="_blank"
