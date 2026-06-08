@@ -1,5 +1,6 @@
 ---
 const currentYear = new Date().getFullYear();
+const goFundMeUrl = 'https://gofund.me/164fb8ef4';
 ---
 
 <footer class="bg-navy-950 text-white">
@@ -33,6 +34,7 @@ const currentYear = new Date().getFullYear();
           <li><a href="/athletics" class="text-navy-300 hover:text-white transition-colors text-sm">Athletics</a></li>
           <li><a href="/enrollment" class="text-navy-300 hover:text-white transition-colors text-sm">Enrollment</a></li>
           <li><a href="/support-and-sponsorship" class="text-gold-400 hover:text-gold-300 transition-colors text-sm font-semibold">Support and Sponsorship</a></li>
+          <li><a href={goFundMeUrl} target="_blank" rel="noopener noreferrer" class="text-navy-300 hover:text-white transition-colors text-sm">GoFundMe</a></li>
           <li><a href="/dress-code" class="text-navy-300 hover:text-white transition-colors text-sm">Dress Code</a></li>
           <li><a href="/code-of-conduct" class="text-navy-300 hover:text-white transition-colors text-sm">Code of Conduct</a></li>
         </ul>
@@ -73,6 +75,19 @@ const currentYear = new Date().getFullYear();
         >
           Pre-Enroll Today
         </a>
+        <div class="mt-4 rounded-2xl border border-white/10 bg-white/5 p-4 text-center">
+          <div class="flex items-center justify-center mb-3">
+            <img src="/images/GoFundMe_Logo.svg.png" alt="GoFundMe logo" class="h-10 w-auto" />
+          </div>
+          <a
+            href={goFundMeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sm w-full rounded-lg bg-[#00aa5c] border border-[#00aa5c] py-3 text-white inline-flex items-center justify-center hover:bg-[#009353] transition-all duration-300"
+          >
+            Donate via GoFundMe
+          </a>
+        </div>
         <a
           href="https://go.boarddocs.com/fl/palmbeach/Board.nsf/files/D97JBY4C73BA/$file/2026-2027%20Calendar%20Final.pdf"
           target="_blank"

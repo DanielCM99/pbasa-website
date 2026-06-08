@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
 
 const donateUrl = 'https://securelink-prod.valorpaytech.com:4430/?redirect=1&uid=98074c50-3f41-11f1-9742-12a0879a85b1';
+const goFundMeUrl = 'https://gofund.me/164fb8ef4';
 
 const donationAmounts = ['$25', '$50', '$100', '$500+'];
 const donationSupports = [
@@ -80,6 +81,22 @@ const impactItems = [
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
           </a>
+          <div class="mt-6 rounded-[28px] border border-white/10 bg-navy-950 p-6 shadow-xl shadow-navy-900/20">
+            <div class="flex items-center justify-center mb-5">
+              <img src="/images/GoFundMe_Logo.svg.png" alt="GoFundMe logo" class="h-12 w-auto" />
+            </div>
+            <p class="text-center text-navy-300 text-sm leading-relaxed mb-5">
+              Prefer to support us through GoFundMe? Use the button below to donate directly to our campaign.
+            </p>
+            <a
+              href={goFundMeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm w-full justify-center py-3 bg-[#00aa5c] border-[#00aa5c] text-white rounded-lg inline-flex items-center justify-center hover:bg-[#009353] transition-all duration-300"
+            >
+              Donate via GoFundMe
+            </a>
+          </div>
           <p class="text-gold-700 font-semibold mt-5">Quick, easy, and tax-deductible.</p>
         </div>
 
