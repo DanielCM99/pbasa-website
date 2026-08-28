@@ -62,3 +62,40 @@ Para actualizar tu copia local con lo ultimo del repositorio:
 ```bash
 git pull origin master
 ```
+
+## Preparacion para agentes de IA (AI / agent readiness)
+
+El sitio expone una capa legible por maquinas. Todo se genera en el build, no hay
+que mantenerlo a mano:
+
+| Recurso | Origen | Notas |
+| --- | --- | --- |
+| `/sitemap.xml` | `scripts/postbuild.mjs` | Todas las paginas indexables con `lastmod` |
+| `/llms.txt` | `public/llms.txt` | Incluye seccion "When to use this site" |
+| `/robots.txt` | `public/robots.txt` | Declara el sitemap |
+| `/<pagina>.md` | `scripts/postbuild.mjs` | Version Markdown de cada pagina |
+| JSON-LD | `src/data/site.ts` | `School`/`Organization` + `WebSite` + `WebPage` |
+| 404 real | `src/pages/404.astro` | HTTP 404 con mapa del sitio |
+| `Accept: text/markdown` | `netlify/edge-functions/markdown.ts` | Responde Markdown con `Vary: Accept, Accept-Encoding` |
+
+Si agregas una pagina nueva en `src/pages/`, agregala tambien a:
+
+1. `public/llms.txt` (lista de paginas)
+2. `PRIORITY` en `scripts/postbuild.mjs` (opcional, prioridad del sitemap)
+3. `ROUTES` en `tests/agent-readiness.test.mjs`
+
+### Tests
+
+```bash
+npm run build
+npm test
+```
+
+### Verificacion del sitio publicado
+
+```bash
+npm run test:live
+```
+
+Verifica contra `https://pbasa.org` (o pasa otra URL:
+`node scripts/verify-live.mjs https://deploy-preview--sitio.netlify.app`).

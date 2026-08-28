@@ -4,3 +4,29 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+# Markdown content negotiation + Vary: Accept (see netlify/edge-functions/markdown.ts)
+[[edge_functions]]
+  function = "markdown"
+  path = "/*"
+
+# Machine-readable files must be served with a sane content type.
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Vary = "Accept-Encoding"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/*.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Vary = "Accept, Accept-Encoding"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+    Access-Control-Allow-Origin = "*"

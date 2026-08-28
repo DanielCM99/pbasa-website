@@ -1,0 +1,7 @@
+# https://pbasa.org - tuition-free K-8 public charter school, West Palm Beach, FL
+# Agent guidance: https://pbasa.org/llms.txt
+
+User-agent: *
+Allow: /
+
+Sitemap: https://pbasa.org/sitemap.xml

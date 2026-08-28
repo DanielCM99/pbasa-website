@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/PageHero.astro';
+
+const preEnrollUrl = 'https://docs.google.com/forms/d/1CuhqVLxdc6ujO8y3FLcWLoVdVuoKK6SDI2h0ay5Hulo/';
+---
+
+<Layout
+  title="Contact"
+  description="Contact Palm Beach Academy of Sports and Arts - email addresses for enrollment questions, employment inquiries, sponsorships, and general information about our tuition-free K-8 charter school in West Palm Beach."
+>
+  <PageHero
+    title="Contact Us"
+    subtitle="Questions about enrollment, employment, or supporting the school? Here is how to reach the PBASA team."
+  />
+
+  <section class="section-padding bg-white">
+    <div class="container-narrow max-w-4xl">
+      <p class="text-navy-600 text-lg leading-relaxed">
+        Palm Beach Academy of Sports and Arts is a tuition-free K-8 public charter school serving families in
+        West Palm Beach and the surrounding Palm Beach County communities. We welcome questions from prospective
+        families, current families, educators looking for a place to teach, and community partners who want to
+        invest in our students. Email is the fastest and most reliable way to reach us, and every message goes
+        to a member of our administrative team who will follow up directly.
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-6 mt-12">
+        <div class="pillar-card">
+          <h2 class="text-xl font-heading font-bold text-navy-900 mb-3">General &amp; Enrollment</h2>
+          <div class="gold-divider mb-4"></div>
+          <p class="text-navy-600 text-sm leading-relaxed mb-4">
+            Admissions questions, enrollment paperwork, grade-level availability, school calendar, uniforms,
+            transportation, and anything else about daily life at PBASA.
+          </p>
+          <a href="mailto:contact@pbasa.org" class="text-gold-600 hover:text-gold-700 font-semibold">contact@pbasa.org</a>
+        </div>
+
+        <div class="pillar-card">
+          <h2 class="text-xl font-heading font-bold text-navy-900 mb-3">Employment</h2>
+          <div class="gold-divider mb-4"></div>
+          <p class="text-navy-600 text-sm leading-relaxed mb-4">
+            Teaching positions, coaching and after-school roles, support staff, and general employment
+            inquiries. Please include your resume and the role you are interested in.
+          </p>
+          <a href="mailto:employment@pbasa.org" class="text-gold-600 hover:text-gold-700 font-semibold">employment@pbasa.org</a>
+        </div>
+
+        <div class="pillar-card">
+          <h2 class="text-xl font-heading font-bold text-navy-900 mb-3">Sponsorships &amp; Donations</h2>
+          <div class="gold-divider mb-4"></div>
+          <p class="text-navy-600 text-sm leading-relaxed mb-4">
+            Businesses, foundations, and individuals who want to sponsor a program, donate equipment, or
+            support our students can reach our team or review current opportunities.
+          </p>
+          <a href="/support-and-sponsorship" class="text-gold-600 hover:text-gold-700 font-semibold">Support and Sponsorship</a>
+        </div>
+
+        <div class="pillar-card">
+          <h2 class="text-xl font-heading font-bold text-navy-900 mb-3">Pre-Enroll Your Student</h2>
+          <div class="gold-divider mb-4"></div>
+          <p class="text-navy-600 text-sm leading-relaxed mb-4">
+            Pre-enrollment is open for the upcoming school year. Completing the form takes a few minutes and
+            places your student on our list with no obligation and no tuition.
+          </p>
+          <a href={preEnrollUrl} target="_blank" rel="noopener noreferrer" class="text-gold-600 hover:text-gold-700 font-semibold">
+            Open the pre-enrollment form
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-12 rounded-2xl bg-navy-50 border border-navy-100 p-8">
+        <h2 class="text-xl font-heading font-bold text-navy-900 mb-3">School details</h2>
+        <div class="gold-divider mb-4"></div>
+        <dl class="space-y-2 text-navy-600">
+          <div class="flex flex-col sm:flex-row sm:gap-2">
+            <dt class="font-semibold text-navy-800 sm:w-40">School</dt>
+            <dd>Palm Beach Academy of Sports and Arts (PBASA)</dd>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:gap-2">
+            <dt class="font-semibold text-navy-800 sm:w-40">Type</dt>
+            <dd>Tuition-free public charter school, grades K-8</dd>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:gap-2">
+            <dt class="font-semibold text-navy-800 sm:w-40">Area served</dt>
+            <dd>West Palm Beach and Palm Beach County, Florida</dd>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:gap-2">
+            <dt class="font-semibold text-navy-800 sm:w-40">Website</dt>
+            <dd><a href="https://pbasa.org/" class="text-gold-600 hover:text-gold-700">pbasa.org</a></dd>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:gap-2">
+            <dt class="font-semibold text-navy-800 sm:w-40">Response time</dt>
+            <dd>Most emails are answered within two business days.</dd>
+          </div>
+        </dl>
+        <p class="text-navy-500 text-sm mt-6">
+          Our campus address and main phone line will be published here as soon as they are finalized. Until
+          then, email is the official channel for all school business.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

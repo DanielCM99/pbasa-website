@@ -2,13 +2,33 @@
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+import { SITE_NAME, SITE_URL, DEFAULT_OG_IMAGE, buildJsonLd } from '../data/site';
 
 interface Props {
   title: string;
   description?: string;
+  image?: string;
+  ogType?: string;
+  noindex?: boolean;
 }
 
-const { title, description = 'Palm Beach Academy of Sports and Arts - Empowering every student through classical academics, the arts, and athletics.' } = Astro.props;
+const {
+  title,
+  description = 'Palm Beach Academy of Sports and Arts - Empowering every student through classical academics, the arts, and athletics.',
+  image = DEFAULT_OG_IMAGE,
+  ogType = 'website',
+  noindex = false,
+} = Astro.props;
+
+const fullTitle = `${title} | ${SITE_NAME}`;
+const canonicalPath = Astro.url.pathname.replace(/\/index\.html$/, '/');
+const canonicalUrl = new URL(canonicalPath, SITE_URL).href;
+const ogImageUrl = new URL(image, SITE_URL).href;
+const markdownUrl = new URL(
+  canonicalPath === '/' ? '/index.md' : `${canonicalPath.replace(/\/$/, '')}.md`,
+  SITE_URL
+).href;
+const jsonLd = buildJsonLd({ url: canonicalUrl, title: fullTitle, description });
 ---
 
 <!doctype html>
@@ -18,11 +38,36 @@ const { title, description = 'Palm Beach Academy of Sports and Arts - Empowering
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <link rel="icon" type="image/png" href="/images/logo-icon.png" />
-    <title>{title} | Palm Beach Academy of Sports and Arts</title>
+    <title>{fullTitle}</title>
+
+    <link rel="canonical" href={canonicalUrl} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+
+    <!-- Machine-readable alternates for AI agents -->
+    <link rel="alternate" type="text/markdown" href={markdownUrl} title="Markdown version" />
+    <link rel="alternate" type="text/plain" href={`${SITE_URL}/llms.txt`} title="llms.txt" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:alt" content={`${SITE_NAME} students`} />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
 
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
   </head>
   <body class="min-h-screen flex flex-col">
     <Navbar />
